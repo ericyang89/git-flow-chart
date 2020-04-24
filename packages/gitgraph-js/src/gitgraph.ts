@@ -538,14 +538,22 @@ function createGitgraph(
         })
       : null;
 
+      if(dotText){
+        dotText.setAttribute("fill", "#fff");
+      }
+
+    setTimeout(() => {
+      appendTooltipToGraph(commit);
+    }, 0);
+
     return createG({
       onClick: commit.onClick,
       onMouseOver: () => {
-        appendTooltipToGraph(commit);
+        // appendTooltipToGraph(commit);
         commit.onMouseOver();
       },
       onMouseOut: () => {
-        if ($tooltip) $tooltip.remove();
+        // if ($tooltip) $tooltip.remove();
         commit.onMouseOut();
       },
       children: [createDefs([circle, circleClipPath]), useCirclePath, dotText],
@@ -554,8 +562,8 @@ function createGitgraph(
 
   function appendTooltipToGraph(commit: Commit): void {
     if (!svg.firstChild) return;
-    if (gitgraph.isVertical && gitgraph.mode !== Mode.Compact) return;
-    if (gitgraph.isVertical && !commit.style.hasTooltipInCompactMode) return;
+    // if (gitgraph.isVertical && gitgraph.mode !== Mode.Compact) return;
+    // if (gitgraph.isVertical && !commit.style.hasTooltipInCompactMode) return;
 
     const tooltip = commit.renderTooltip
       ? commit.renderTooltip(commit)
