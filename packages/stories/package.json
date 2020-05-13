@@ -17,8 +17,7 @@
     "build": "build-storybook"
   },
   "dependencies": {
-    "@gitgraph/js": "1.3.5",
-    "@gitgraph/react": "1.5.4"
+    "@xhs/git-flow-chart": "1.5.4"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",

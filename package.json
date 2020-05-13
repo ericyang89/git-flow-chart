@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicoespeon/gitgraph.js"
+    "url": "https://code.devops.xiaohongshu.com/efficiency-fe/git-flow-chart"
   },
   "license": "MIT",
   "keywords": [
@@ -22,12 +22,12 @@
   ],
   "scripts": {
     "lerna": "lerna",
-    "build": "lerna run build --scope=@gitgraph/{core,react,js,node} --stream",
+    "build": "lerna run build --scope=@xhs/{git-flow-chart} --stream",
     "watch": "lerna run watch --stream",
     "storybook": "lerna run storybook --stream",
     "develop": "concurrently npm:watch npm:storybook",
-    "website": "lerna run start --scope=@gitgraph/website --stream",
-    "deploy:website": "lerna run deploy --scope=@gitgraph/website --stream",
+    "//website": "lerna run start --scope=@gitgraph/website --stream",
+    "//deploy:website": "lerna run deploy --scope=@gitgraph/website --stream",
     "lint": "tslint packages/**/src/**/*",
     "lint:fix": "npm run lint -- --fix",
     "pretest": "npm run build",
@@ -52,7 +52,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "husky": {
+  "//husky": {
     "hooks": {
       "pre-commit": "npm run lint:fix && pretty-quick --staged"
     }

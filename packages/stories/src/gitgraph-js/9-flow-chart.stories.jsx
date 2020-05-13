@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { createGitgraph, templateExtend } from "@gitgraph/js";
+import { createGitgraph, templateExtend } from "@xhs/git-flow-chart";
 
 import { GraphContainer } from "../helpers";
 
